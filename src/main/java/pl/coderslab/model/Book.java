@@ -9,11 +9,11 @@ import lombok.ToString;
 @ToString
 public class Book {
 
-    private long id;
+    private Long id;
     private String isbn;
     private String title;
     private String author;
-    private String editor;
-    private String tag;
+    private String publisher;
+    private String type;
 
 }
