@@ -1,12 +1,13 @@
 package pl.coderslab.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
 @ToString
+@Getter
+@Setter
+
 public class Book {
 
     private Long id;

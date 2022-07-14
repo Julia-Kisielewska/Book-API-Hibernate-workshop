@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 
 @Data
@@ -34,6 +35,8 @@ public class MockBookService implements BookService {
         this.list = list;
     }
 
+    private static Long nextId = 4L;
+
     @Override
     public List<Book> getBooks() {
         return this.getList();
@@ -41,13 +44,54 @@ public class MockBookService implements BookService {
 
     @Override
     public Book getBookById(String id) {
-                Long bookId = Long.parseLong(id);
+        Long bookId = Long.parseLong(id);
 
-        BookList list = new BookList();
-        List<Book> books = list.getBooks();
+        List<Book> books = this.getList();
 
         return books.stream()
                 .filter(s -> Objects.equals(s.getId(), bookId))
                 .findFirst().get();
+    }
+
+    @Override
+    public List<Book> addBook(Book book) {
+
+        List<Book> books = this.getList();
+        book.setId(nextId++);
+        nextId= nextId++;
+        books.add(book);
+        this.setList(books);
+        return this.list;
+    }
+
+    @Override
+    public List<Book> updateBook(String id, Book book) {
+        Long bookId = Long.parseLong(id);
+
+        List<Book> books = this.getList();
+
+        List<Book> collect = books.stream()
+                .filter(s -> !(Objects.equals(s.getId(), bookId)))
+                .collect(Collectors.toList());
+
+        collect.add(book);
+        this.setList(collect);
+
+        return this.list;
+    }
+
+    @Override
+    public List<Book> deleteBook(String id) {
+        Long bookId = Long.parseLong(id);
+
+        List<Book> books = this.getList();
+
+        List<Book> collect = books.stream()
+                .filter(s -> !(Objects.equals(s.getId(), bookId)))
+                .collect(Collectors.toList());
+
+        this.setList(collect);
+
+        return this.list;
     }
 }
