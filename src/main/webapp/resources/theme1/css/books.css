@@ -24,3 +24,10 @@ link {
     background-color: white;
     color: dimgray;
 }
+
+.book-form {
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+

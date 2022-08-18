@@ -25,5 +25,12 @@ public class ManageBookController {
         return "/books/all";
     }
 
+    @GetMapping("/add")
+    public String addBook(Model model){
+        Book book = new Book();
+        model.addAttribute("book", book);
+        return "/books/add";
+    }
+
 
 }
