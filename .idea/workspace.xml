@@ -9,10 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b95a38f-d286-4d6c-8a7f-25948520659f" name="Changes" comment="20220818_list + findById">
+    <list default="true" id="6b95a38f-d286-4d6c-8a7f-25948520659f" name="Changes" comment="20220818_all methods">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/ManageBookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/all.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/theme1/css/books.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/JpaBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/JpaBookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/AppConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +26,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -54,6 +58,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/home/julia/Documents/JAVA CodersLab/Blok5/warjeew15SpringHib",
+    "list.type.of.created.stylesheet": "CSS",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -65,6 +70,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/theme1/css" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.63" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.63" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
@@ -167,7 +177,7 @@
       <workItem from="1658071233007" duration="4545000" />
       <workItem from="1658424067973" duration="1507000" />
       <workItem from="1658559487705" duration="208000" />
-      <workItem from="1660803545737" duration="15390000" />
+      <workItem from="1660803545737" duration="18574000" />
     </task>
     <task id="LOCAL-00001" summary="cz1">
       <created>1657783009834</created>
@@ -211,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660819618085</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="20220818_all methods">
+      <created>1660820396988</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660820396988</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +250,7 @@
     <MESSAGE value="20220818_poprawiony warsztat" />
     <MESSAGE value="20220818_init" />
     <MESSAGE value="20220818_list + findById" />
-    <option name="LAST_COMMIT_MESSAGE" value="20220818_list + findById" />
+    <MESSAGE value="20220818_all methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="20220818_all methods" />
   </component>
 </project>
