@@ -9,15 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b95a38f-d286-4d6c-8a7f-25948520659f" name="Changes" comment="20220818_poprawiony warsztat">
-      <change afterPath="$PROJECT_DIR$/src/main/java/log.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b943c401-edef-47a8-bdf1-fe6c58600102.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b943c401-edef-47a8-bdf1-fe6c58600102.xml" afterDir="false" />
+    <list default="true" id="6b95a38f-d286-4d6c-8a7f-25948520659f" name="Changes" comment="20220818_init">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/JpaBookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/BookRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/log.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/log.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/MockBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/MockBookService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +172,7 @@
       <workItem from="1658071233007" duration="4545000" />
       <workItem from="1658424067973" duration="1507000" />
       <workItem from="1658559487705" duration="208000" />
-      <workItem from="1660803545737" duration="5547000" />
+      <workItem from="1660803545737" duration="14423000" />
     </task>
     <task id="LOCAL-00001" summary="cz1">
       <created>1657783009834</created>
@@ -202,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660807823899</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="20220818_init">
+      <created>1660809107998</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1660809107998</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +229,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cz1" />
     <MESSAGE value="20220818_poprawiony warsztat" />
-    <option name="LAST_COMMIT_MESSAGE" value="20220818_poprawiony warsztat" />
+    <MESSAGE value="20220818_init" />
+    <option name="LAST_COMMIT_MESSAGE" value="20220818_init" />
   </component>
 </project>

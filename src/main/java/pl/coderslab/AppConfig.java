@@ -10,7 +10,9 @@ import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import pl.coderslab.model.JpaBookService;
 import pl.coderslab.model.MockBookService;
+import pl.coderslab.repository.BookRepository;
 
 import javax.persistence.EntityManagerFactory;
 
@@ -18,12 +20,12 @@ import javax.persistence.EntityManagerFactory;
 @EnableWebMvc
 @ComponentScan(basePackages = "pl.coderslab")
 @EnableTransactionManagement
-@EnableJpaRepositories
+@EnableJpaRepositories(basePackages = "pl.coderslab.repository")
 
 public class AppConfig implements WebMvcConfigurer {
 
     @Bean
-    @Primary
+//    @Primary
     public MockBookService mockBookService(){return new MockBookService();}
 
     @Bean
@@ -32,11 +34,9 @@ public class AppConfig implements WebMvcConfigurer {
         emfb.setPersistenceUnitName("workshopHibernate");
         return emfb;
     }
-
     @Bean
     public JpaTransactionManager transactionManager(EntityManagerFactory emf) {
         return new JpaTransactionManager(emf);
     }
-
 
 }

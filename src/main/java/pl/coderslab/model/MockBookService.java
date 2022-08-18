@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 
@@ -42,14 +43,14 @@ public class MockBookService implements BookService {
     }
 
     @Override
-    public Book getBookById(String id) {
+    public Optional<Book> getBookById(String id) {
         Long bookId = Long.parseLong(id);
 
         List<Book> books = this.getList();
 
-        return books.stream()
+        return Optional.of(books.stream()
                 .filter(s -> Objects.equals(s.getId(), bookId))
-                .findFirst().get();
+                .findFirst().get());
     }
 
     @Override
