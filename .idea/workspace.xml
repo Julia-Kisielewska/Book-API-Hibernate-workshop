@@ -10,10 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b95a38f-d286-4d6c-8a7f-25948520659f" name="Changes" comment="cz1">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b943c401-edef-47a8-bdf1-fe6c58600102.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b943c401-edef-47a8-bdf1-fe6c58600102.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/BookList.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/BookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/MockBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/MockBookService.java" afterDir="false" />
     </list>
@@ -56,10 +57,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/julia/Documents/JAVA CodersLab/Blok3/Worksop03",
+    "last_opened_file_path": "/home/julia/Documents/JAVA CodersLab/Blok4/BookAPI_workshop",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "213a427d02e9e7bc06897894fb2901be"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -69,7 +71,8 @@
 }]]></component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.63" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.63" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="BookAPI_workshop:war exploded">
           <settings>
@@ -164,7 +167,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657780949227</updated>
-      <workItem from="1657780950732" duration="21375000" />
+      <workItem from="1657780950732" duration="21593000" />
+      <workItem from="1658071233007" duration="4545000" />
+      <workItem from="1658424067973" duration="1507000" />
+      <workItem from="1658559487705" duration="208000" />
+      <workItem from="1660803545737" duration="4107000" />
     </task>
     <task id="LOCAL-00001" summary="cz1">
       <created>1657783009834</created>
@@ -180,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657791738980</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="cz1">
+      <created>1657807403169</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657807403169</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

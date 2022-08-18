@@ -1,11 +1,11 @@
 package pl.coderslab.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -19,7 +19,8 @@ public class MockBookService implements BookService {
     private List<Book> list;
 
     @Autowired
-    public MockBookService(List<Book> list) {
+    public MockBookService() {
+        list = new ArrayList<>();
         list.add(new Book(1L, "9788324631766", "Thinking in Java",
                 "Bruce Eckel", "Helion", "programming"));
 
@@ -31,8 +32,6 @@ public class MockBookService implements BookService {
 
         list.add(new Book(4L, "8377580284", "Krol Artur i Rycerze Okraglego Stolu",
                 "Roger Lancelyn Green", "Zysk i S-ka", "history"));
-
-        this.list = list;
     }
 
     private static Long nextId = 4L;
@@ -54,14 +53,9 @@ public class MockBookService implements BookService {
     }
 
     @Override
-    public List<Book> addBook(Book book) {
-
-        List<Book> books = this.getList();
+    public void addBook(Book book) {
         book.setId(nextId++);
-        nextId= nextId++;
-        books.add(book);
-        this.setList(books);
-        return this.list;
+        list.add(book);
     }
 
     @Override
@@ -71,9 +65,10 @@ public class MockBookService implements BookService {
         List<Book> books = this.getList();
 
         List<Book> collect = books.stream()
-                .filter(s -> !(Objects.equals(s.getId(), bookId)))
+                .filter(s -> !(s.getId().equals(bookId)))
                 .collect(Collectors.toList());
 
+        book.setId(bookId);
         collect.add(book);
         this.setList(collect);
 

@@ -7,7 +7,7 @@ import lombok.*;
 @ToString
 @Getter
 @Setter
-
+@NoArgsConstructor
 public class Book {
 
     private Long id;

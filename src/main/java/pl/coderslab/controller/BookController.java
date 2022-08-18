@@ -17,15 +17,10 @@ public class BookController {
     }
 
 
-//    @RequestMapping("/helloBook")
-//    public Book helloBook() {
-//        return new Book(1L, "9788324631766", "Thinking in Java",
-//                "Bruce Eckel", "Helion", "programming");
-//    }
-
-    @PostMapping("/helloBook")
-    public Book helloBook(@RequestBody Book book) {
-        return book;
+    @RequestMapping("/helloBook")
+    public Book helloBook() {
+        return new Book(1L, "9788324631766", "Thinking in Java",
+                "Bruce Eckel", "Helion", "programming");
     }
 
     @GetMapping("")
@@ -41,22 +36,21 @@ public class BookController {
     }
 
     @PostMapping("")
-    public List<Book> addBook() {
-
-        Book book = new Book(5L, "8377580284", "Harry Potter 1 and the Philosopher's Stone",
-                " Joanne K. Rowling", "Bloomsbury UK", "fantasy");
-
-        return bookService.addBook(book);
+    public void addBook(@RequestBody Book book) {
+//
+//        Book book = new Book(5L, "8377580284", "Harry Potter 1 and the Philosopher's Stone",
+//                " Joanne K. Rowling", "Bloomsbury UK", "fantasy");
+bookService.addBook(book);
+//        return bookService.addBook(book);
     }
 
-
     @PutMapping("/{id}")
-    public List<Book> updateBook(@PathVariable("id") String id) {
+    public List<Book> updateBook(@PathVariable("id") String id, @RequestBody Book book) {
 
         Long bookId = Long.parseLong(id);
 
-        Book book = new Book(bookId, "8377580284", "Harry Potter 2 and the Chamber of Secrets",
-                " Joanne K. Rowling", "Bloomsbury UK", "fantasy");
+//        Book book = new Book(bookId, "8377580284", "Harry Potter 2 and the Chamber of Secrets",
+//                " Joanne K. Rowling", "Bloomsbury UK", "fantasy");
 
         return bookService.updateBook(id, book);
     }

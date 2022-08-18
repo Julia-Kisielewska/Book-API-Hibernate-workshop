@@ -7,7 +7,7 @@ public interface BookService {
 
     Book getBookById(String id);
 
-    List<Book> addBook(Book book);
+    void addBook(Book book);
 
     List<Book> updateBook(String id, Book book);
 
