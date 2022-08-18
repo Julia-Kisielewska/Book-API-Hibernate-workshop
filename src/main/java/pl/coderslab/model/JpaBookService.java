@@ -25,21 +25,30 @@ public class JpaBookService implements BookService {
 
     public Optional<Book> getBookById(String id) {
         Long bookId = Long.valueOf(id);
-            return bookRepository.findById(bookId);
+        return bookRepository.findById(bookId);
     }
 
     @Override
     public void addBook(Book book) {
-
+        bookRepository.save(book);
     }
 
     @Override
     public List<Book> updateBook(String id, Book book) {
-        return null;
+        Book toReplace = bookRepository.findById(Long.valueOf(id)).get();
+
+        toReplace.setIsbn(book.getIsbn());
+        toReplace.setTitle(book.getTitle());
+        toReplace.setAuthor(book.getAuthor());
+        toReplace.setPublisher(book.getPublisher());
+        toReplace.setType(book.getType());
+
+        return bookRepository.findAll();
     }
 
     @Override
     public List<Book> deleteBook(String id) {
-        return null;
+        bookRepository.deleteById(Long.valueOf(id));
+        return bookRepository.findAll();
     }
 }

@@ -33,31 +33,21 @@ public class BookController {
     public Book bookById(@PathVariable("id") String id) {
         return bookService.getBookById(id).get();
     }
-//
-//    @PostMapping("")
-//    public void addBook(@RequestBody Book book) {
-////
-////        Book book = new Book(5L, "8377580284", "Harry Potter 1 and the Philosopher's Stone",
-////                " Joanne K. Rowling", "Bloomsbury UK", "fantasy");
-//bookService.addBook(book);
-////        return bookService.addBook(book);
-//    }
-//
-//    @PutMapping("/{id}")
-//    public List<Book> updateBook(@PathVariable("id") String id, @RequestBody Book book) {
-//
-//        Long bookId = Long.parseLong(id);
-//
-////        Book book = new Book(bookId, "8377580284", "Harry Potter 2 and the Chamber of Secrets",
-////                " Joanne K. Rowling", "Bloomsbury UK", "fantasy");
-//
-//        return bookService.updateBook(id, book);
-//    }
-//
-//    @DeleteMapping("/{id}")
-//    public List<Book> deleteBook(@PathVariable("id") String id) {
-//
-//        return bookService.deleteBook(id);
-//    }
+
+    @PostMapping("")
+    public void addBook(@RequestBody Book book) {
+        bookService.addBook(book);
+    }
+
+    @PutMapping("/{id}")
+    public List<Book> updateBook(@PathVariable("id") String id, @RequestBody Book book) {
+        Long bookId = Long.parseLong(id);
+        return bookService.updateBook(id, book);
+    }
+
+    @DeleteMapping("/{id}")
+    public List<Book> deleteBook(@PathVariable("id") String id) {
+        return bookService.deleteBook(id);
+    }
 }
 
