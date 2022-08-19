@@ -3,6 +3,10 @@ package pl.coderslab.model;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Data
 @AllArgsConstructor
@@ -17,9 +21,14 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank
+    @Pattern(regexp = "\\d{10}")
     private String isbn;
+    @NotBlank
     private String title;
+    @NotBlank
     private String author;
+    @NotBlank
     private String publisher;
     private String type;
 
