@@ -1,5 +1,6 @@
 package pl.coderslab.controller;
 
+import com.google.protobuf.StringValue;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -51,6 +52,20 @@ public class ManageBookController {
         Book book = bookService.getBookById(id).get();
         model.addAttribute("book", book);
         return "/books/show";
+    }
+
+    @GetMapping("/edit")
+    public String edit(Model model, @RequestParam(name = "id") String id) {
+        Book book = bookService.getBookById(id).get();
+        model.addAttribute("book", book);
+        return "/books/edit";
+    }
+
+    @PostMapping("/edit")
+    public String edit (Book book, Model model){
+        String id = String.valueOf(book.getId());
+        bookService.updateBook(id, book);
+        return "redirect:/admin/books/all";
     }
 
     @GetMapping("/delete")
