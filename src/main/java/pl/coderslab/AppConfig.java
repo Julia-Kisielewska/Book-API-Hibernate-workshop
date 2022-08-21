@@ -32,9 +32,9 @@ import java.util.Locale;
 
 public class AppConfig implements WebMvcConfigurer {
 
-    @Bean
-//    @Primary
-    public MockBookService mockBookService(){return new MockBookService();}
+//    @Bean
+////    @Primary
+//    public MockBookService mockBookService(){return new MockBookService();}
 
     @Bean
     public LocalEntityManagerFactoryBean entityManagerFactory() {

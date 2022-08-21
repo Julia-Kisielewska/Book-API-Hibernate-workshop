@@ -32,4 +32,12 @@ public class Book {
     private String publisher;
     private String type;
 
+    public Book updateFields(Book book){
+        this.setIsbn(book.getIsbn());
+        this.setTitle(book.getTitle());
+        this.setAuthor(book.getAuthor());
+        this.setPublisher(book.getPublisher());
+        this.setType(book.getType());
+        return this;
+    }
 }
